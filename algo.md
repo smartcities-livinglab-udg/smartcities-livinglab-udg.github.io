@@ -1,4 +1,4 @@
-# SmartCities LivingLab UdeG
+# Ejemplo
 
 *Sitio de GitHub del Centro de Inovación en Ciudades Inteligentes.*
 

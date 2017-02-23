@@ -1,0 +1,36 @@
+---
+# Front matter comment to ensure Jekyll properly reads file.
+---
+@charset "utf-8";
+@import "minima";
+
+
+.projects{
+  width: 100%;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+
+  .project{
+    float: left;
+    width: 100%;
+    border: 1px solid #ccc;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    
+    overflow: hidden;
+
+    &:first-child{
+      margin-left: 0;
+    }
+
+    &__container{
+      border: 1px solid black;
+    }
+  }
+}

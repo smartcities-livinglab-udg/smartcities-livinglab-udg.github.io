@@ -3,36 +3,36 @@ layout: default
 ---
 
 <div class="home">
+  fdsfdsafasdfdasfas
 
   <h1 class="page-heading">Projects</h1>
+  <div class="projects">
+  {% for project in site.data.projects %}
+    {% if project.visible %}
+      <div class="project project__container">
+        <div class="project__header">
+          <a href="{{ project.enlace }}"><img src="{{ project.img | prepend: site.baseurl }}"/></a>
+          <h3>{{ project.name }}</h3>
+        </div>
+        <div class="project__content">
+          {{ project.content | strip_html | normalize_whitespace | truncate: 260 | escape }}
+        </div>
+        <div class="project__footer">
+          <div class="project__tags">
+            {% for tag in project.tags %}
+              <div class="project__tag">
+                {{tag}}
+              </div>
+            {% endfor %}
+          </div>
+          <div class="project_social">
 
-  <ul>
-    {% for project in site.data.projects %}
-      {% if project.visible %}
-        <div class="project project__container">
-          <div class="project__header">
-            <img src="{{ project.img | prepend: site.baseurl }}"/>
-            <h3>{{ project.name }}</h3>
-          </div>
-          <div class="project__content">
-            {{ project.content }}
-          </div>
-          <div class="project__footer">
-            <div class="project__tags">
-              {% for tag in project.tags %}
-                <div class="project__tag">
-                  {{tag}}
-                </div>
-              {% endfor %}
-            </div>
-            <div class="project_social">
-              
-            </div>
           </div>
         </div>
-      {% endif %}
-    {% endfor %}
-  </ul>
+      </div>
+    {% endif %}
+  {% endfor %}
+  </div>
 
   <h1 class="page-heading">Posts</h1>
 
