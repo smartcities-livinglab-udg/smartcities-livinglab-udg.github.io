@@ -5,12 +5,12 @@
 
 ## Instalación
 
-Para poder correr el sitio de manera local es neceario tener instalado Ruby y las gemas Bundle y Jekyll.
+Para poder correr el sitio de manera local es neceario tener instalado Ruby (y Ruby-dev) ademàs de las gemas Bundle y Jekyll.
 
 Lo primero que se tiene que hacer es ejecutar el comando:
 
 ```bash
-$ sudo apt-get install ruby -y
+$ sudo apt-get install ruby ruby-dev -y
 ```
 
 Una vez que Ruby se encuentre instalado se tiene que ejecutar
@@ -41,6 +41,7 @@ Después, para correr el sitio de manera local ejecutamos:
 ```bash
 $ bundle exec jekyll serve --watch
 ```
+Si todo saliò bien, en este punto ya puedes ingresar en tu navegador a localhost:4000 o 127.0.0.1:4000.
 
 ### Estructura del proyecto
 ```
